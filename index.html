@@ -16,10 +16,19 @@
   <section class="controls">
     <label>Team filter: <input id="teamFilter" placeholder="team name"></label>
     <label>Search: <input id="search" placeholder="text search"></label>
+    <label>Page size: <select id="pageSize"><option>25</option><option selected>50</option><option>100</option><option>250</option></select></label>
     <button id="clear">Clear</button>
   </section>
 
   <main id="tableWrap">Loading data…</main>
+
+  <nav id="pager" class="pager" aria-label="Pagination" style="display:none">
+    <button id="prev">Prev</button>
+    <span id="pageInfo"></span>
+    <button id="next">Next</button>
+  </nav>
+
+  <div id="spinner" class="spinner" aria-hidden="true" style="display:none">Loading…</div>
 
   <script src="app.js"></script>
 </body>
