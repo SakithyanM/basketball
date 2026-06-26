@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Games Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Games</h1>
+    <p class="subtitle">Browse and filter games from Games.csv</p>
+  </header>
+
+  <section class="controls">
+    <label>Team filter: <input id="teamFilter" placeholder="team name"></label>
+    <label>Search: <input id="search" placeholder="text search"></label>
+    <button id="clear">Clear</button>
+  </section>
+
+  <main id="tableWrap">Loading data…</main>
+
+  <script src="app.js"></script>
+</body>
+</html>
