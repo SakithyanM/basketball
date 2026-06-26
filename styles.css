@@ -1,11 +1,28 @@
-/* Minimal styles for the Games viewer */
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;color:#222;margin:24px}
-header h1{margin:0;font-size:1.6rem}
-.subtitle{margin:4px 0 16px;color:#555}
+/* Theme: orange accents + dark-blue primary */
+:root{
+	--accent-orange:#ff6a00;
+	--accent-blue:#002e5b;
+	--muted:#6b7785;
+	--table-border:#e6e6e6;
+	--bg:#ffffff;
+}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;color:#222;margin:24px;background:var(--bg)}
+header h1{margin:0;font-size:1.6rem;color:var(--accent-blue)}
+.subtitle{margin:4px 0 16px;color:var(--muted)}
 .controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
 .controls input{padding:6px 8px;border:1px solid #ccc;border-radius:4px}
-button#clear{padding:6px 10px;border:none;background:#0078d4;color:#fff;border-radius:4px;cursor:pointer}
+button#clear{padding:6px 10px;border:none;background:var(--accent-orange);color:#fff;border-radius:4px;cursor:pointer}
+button#clear:hover{opacity:0.95}
 table{width:100%;border-collapse:collapse;margin-top:8px}
-th,td{padding:8px;border:1px solid #e6e6e6;text-align:left}
-th{background:#f6f6f6;font-weight:600}
+th,td{padding:8px;border:1px solid var(--table-border);text-align:left}
+th{background:var(--accent-blue);color:#fff;font-weight:600}
 tr:nth-child(even){background:#fbfbfb}
+
+/* subtle striped header for the controls */
+.controls label{color:var(--accent-blue)}
+
+/* pager and spinner */
+.pager{display:flex;gap:12px;align-items:center;margin-top:8px}
+.pager button{padding:6px 10px;border-radius:4px;border:1px solid var(--table-border);background:#fff;color:var(--accent-blue);cursor:pointer}
+.spinner{margin-top:12px;padding:10px;color:var(--muted)}
+
